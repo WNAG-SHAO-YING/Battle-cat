@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>城堡寶開發隊</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/table.css">
+    <style>
+        main {
+            background-image: url(./img/GAMATOTO/background.png);
+            background-size: contain;
+            background-repeat: repeat-x;
+            background-attachment: fixed;
+        }
+
+        table {
+            text-align: center;
+            width: 60%;
+            margin: 60px;
+        }
+
+        .cover {
+            margin: 30px;
+            width: 680px;
+            height: 449px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        span {
+            display: block;
+            margin-top: 5px;
+
+        }
+
+        .intro {
+            word-break: keep-all;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="./homepage.html">
+            <img class="battlecat-icon" src="./img/貓咪大戰爭.png" alt="貓咪大戰爭">
+        </a>
+        <!-- <ul>
+            <li>關卡</li>
+            <li>敵人</li>
+            <li>轉蛋</li>
+        </ul> -->
+    </header>
+    <main>
+        <img class="cover" src="./img/castle/cover.png">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4">素材一覽</th>
+                    <!-- <th></th>
+                    <th></th>
+                    <th></th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="material-box">
+                            <img src="./img/castle/material-01.jpg">
+                            <span>紅磚</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="material-box">
+                            <img src="./img/castle/material-02.jpg">
+                            <span>羽毛</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="material-box">
+                            <img src="./img/castle/material-03.jpg">
+                            <span>備長炭</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="material-box">
+                            <img src="./img/castle/material-04.jpg">
+                            <span>鋼製齒輪</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="material-box">
+                            <img src="./img/castle/material-05.jpg">
+                            <span>黃金</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="material-box">
+                            <img src="./img/castle/material-06.jpg">
+                            <span>宇宙十</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="material-box">
+                            <img src="./img/castle/material-07.jpg">
+                            <span>神祕骨頭</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="material-box"><img style="width: 120px; height: 120px;"
+                                src="./img/castle/material-08.png"><span>菊石</span>
+                    </td>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <colgroup>
+                <col width="30%">
+                <col width="70%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>種類</th>
+                    <th>效果</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="./img/castle/01-緩速.png">
+                            <span>低速砲</span>
+                        </div>
+                    </td>
+                    <td clas="intro">
+                        以熱帶氣氛使敵人動作變慢的貓咪砲
+                        <br>
+                        升級後可延長動作變慢時間
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="./img/castle/02-鐵壁.png">
+                            <span>鐵壁砲</span>
+                        </div>
+                    </td>
+                    <td clas="intro">
+                        開發以科學之力召喚貓盾的貓咪砲
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="./img/castle/03-暫停.png">
+                            <span>閃雷砲</span>
+                        </div>
+                    </td>
+                    <td clas="intro">
+                        取得以雷電之力使敵人動作停止的貓咪砲
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="./img/castle/04-水砲.png">
+                            <span>水喉砲</span>
+                        </div>
+                    </td>
+                    <td clas="intro">
+                        取得以水之力對鋼鐵敵人造成有效傷害的貓咪砲
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="./img/castle/05-天使.png">
+                            <span>天使砲</span>
+                        </div>
+                    </td>
+                    <td clas="intro">
+                        取得以聖光之力挖出不死生物
+                        <br>
+                        造成強力傷害使其動作停止的貓咪砲
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="./img/castle/06-斬盾.png">
+                            <span>斬盾砲</span>
+                        </div>
+                    </td>
+                    <td clas="intro">
+                        取得以音速砲彈破壞護盾後打飛敵人的貓咪砲
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <img src="./img/castle/07-詛咒.png">
+                            <span>詛咒砲</span>
+                        </div>
+                    </td>
+                    <td clas="intro">
+                        取得以詛咒之力封印敵人特殊能力的貓咪砲
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </main>
+</body>
+
+</html>

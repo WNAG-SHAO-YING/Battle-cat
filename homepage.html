@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貓咪大戰爭</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <!-- <link rel="stylesheet" href="./css/slide.css"> -->
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: url(./img/homepage/background.png);
+        }
+
+        .cover {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin: auto;
+        }
+
+        section {
+            position: relative;
+            max-width: 1500px;
+            width: 100%;
+            margin: 50px;
+            aspect-ratio: 3/1.5;
+
+        }
+
+        .tittle {
+            position: absolute;
+            width: 60%;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .content {
+
+
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+
+        }
+
+        .main-card {
+            border: 2px solid gray;
+            width: 80%;
+
+        }
+
+        .main-card a {
+            color: inherit;
+            /* 繼承按鈕的文字顏色 */
+            text-decoration: none;
+            /* 移除底線 */
+        }
+
+        .card {
+            border: 1px solid gray;
+            /* height: auto; */
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .card:hover {
+            opacity: 0.5;
+        }
+
+        span {
+            font-size: 2rem;
+            margin: 5px;
+        }
+
+        .text {
+            font-size: 1.5rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .card-img {
+            width: 110px;
+            object-fit: contain;
+        }
+
+        /* 下面是輪播圖CSS */
+        .slider {
+
+            width: 860px;
+            height: 240px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-content {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            display: flex;
+            transition: all 1s;
+        }
+
+        .slide-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .btn-left,
+        .btn-right {
+            border: none;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: transparent;
+            color: orange;
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 50px;
+            text-align: center;
+            user-select: none;
+        }
+
+        .btn-right {
+            right: 20px;
+        }
+
+        .btn-left {
+            left: 20px;
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 10px;
+            margin: auto;
+            left: 0;
+            right: 0;
+            display: flex;
+            gap: 10px;
+            max-width: max-content;
+        }
+
+        .indicator {
+            height: 10px;
+            width: 40px;
+            background-color: white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .media-content {
+            width: 460px;
+
+        }
+
+        .media-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 800px;
+
+        }
+
+        .media-card {
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            align-items: center;
+            height: 100%;
+            box-sizing: border-box;
+
+        }
+
+        .icon {
+            width: 68px;
+            height: 68px;
+        }
+
+        .media {
+            display: flex;
+            padding: 15px;
+            border-bottom: 2px solid gray;
+            width: 90%;
+            justify-items: center;
+            align-items: center;
+
+
+        }
+
+        .media-tittle {
+            font-size: 24px;
+            text-align: center;
+            width: 80%;
+        }
+
+        .btn {
+            position: relative;
+            border: 5px solid rgb(255, 213, 0);
+            border-radius: 48px;
+            /* text-align: center; */
+            padding: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            z-index: 0;
+            transition: color 1s ease;
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: rgb(255, 213, 0);
+            z-index: -1;
+            transition: 0.8s ease;
+        }
+
+
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .facebook-content {
+            width: 100%;
+            height: 510px;
+            overflow-y: hidden;
+        }
+
+        .two-card {
+            height: 100%;
+        }
+
+        .btn a {
+            color: inherit;
+            /* 繼承按鈕的文字顏色 */
+            text-decoration: none;
+            /* 移除底線 */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="battlecat-icon" src="./img/貓咪大戰爭.png" alt="貓咪大戰爭">
+        <!-- <ul>
+            <li>關卡</li>
+            <li>敵人</li>
+            <li>轉蛋</li>
+        </ul> -->
+    </header>
+    <main>
+        <section>
+            <img class="cover" src="./img/homepage/cover.jpg">
+            <img class="tittle" src="./img/homepage/tittle.png">
+        </section>
+        <!-- 以下輪播圖 -->
+
+
+        <div class="slider">
+            <div class="slider-content">
+                <img class="slide-image" src="./img/cat-capsule/01.png">
+                <img class="slide-image" src="./img/cat-capsule/02.png">
+                <img class="slide-image" src="./img/cat-capsule/03.png">
+                <img class="slide-image" src="./img/cat-capsule/04.png">
+            </div>
+            <div class="shift">
+                <button class="btn-left" onclick="leftshift()">&lt;</button>
+                <button class="btn-right" onclick="rightshift()">&gt;</button>
+            </div>
+            <div class="bottom">
+                <button class="indicator" onclick="setIndex(0)"></button>
+                <button class="indicator" onclick="setIndex(1)"></button>
+                <button class="indicator" onclick="setIndex(2)"></button>
+                <button class="indicator" onclick="setIndex(3)"></button>
+            </div>
+        </div>
+
+        <!-- 以上輪播圖 -->
+        <section class="content">
+            <div class="main-card">
+                <a href="./castle.html">
+                    <div class="card" style="background-color: #ffc83f;">
+                        <img class="card-image" src="./img/homepage/castle-build.webp" style="display: block; ">
+                        <div class="text">城堡寶開發隊</div>
+                    </div>
+                </a>
+                <a href="./cat-capsule.html">
+                    <div class="card" style="background-color: #ffe28a;">
+                        <img class="card-image" src="./img/homepage/cat-capsule.webp">
+                        <div class="text">貓咪轉蛋</div>
+                    </div>
+                </a>
+                <a href="./gamatoto.html">
+                    <div class="card" style="background-color: #ffa83f;">
+                        <img class="card-image" src="./img/homepage/kamatoto.webp">
+                        <div class="text">加碼多多探險隊</div>
+                    </div>
+                </a>
+                <a href="./cat-combo.html">
+                    <div class="card" style="background-color: #4fb2ff;">
+                        <img class="card-image" src="./img/homepage/cat-combo.webp">
+                        <div class="text">貓咪聯組</div>
+                    </div>
+                </a>
+                <a href="./medal.html">
+                    <div class="card" style="background-color: #8affbf">
+                        <img class="card-image" src="./img/homepage/medal.webp">
+                        <div class="text">貓咪獎章</div>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+        <section class="media-section">
+            <div class="media-card" style="margin-right: 30px;">
+                <div class="media">
+                    <img class="icon" src="./img/homepage/icon.png">
+                    <strong class="media-tittle">
+                        <span>
+                            FcaeBook
+                        </span>
+                        <br>
+                        貓咪大戰爭
+                    </strong>
+                </div>
+                <br>
+                <div class="media-content">
+                    <div class="facebook-content">
+                        <iframe
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNyankoTW&tabs=timeline&width=460&height=720&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                            width="100%" height="720" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </div>
+                </div>
+                <button class="btn">
+                    <strong>
+                        <a href="https://www.facebook.com/NyankoTW/?ref=embed_page#">
+                            進入FaceBook
+                        </a>
+                    </strong>
+                </button>
+            </div>
+            <div class="two-card" style="margin-left: 30px;">
+                <div class="media-card" style="height: 60%;">
+                    <div class="media">
+                        <img class="icon" src="./img/homepage/icon.png">
+                        <strong class="media-tittle">
+                            <span>
+                                YouTube
+                            </span>
+                            <br>
+                            貓咪大戰爭中文版官方YouTube
+                        </strong>
+                    </div>
+                    <br>
+                    <div class="media-content">
+                        <iframe width="100%" height="225" src="https://www.youtube.com/embed/Mipx3s1RwFQ"
+                            title="【貓咪TV】貓戰10週年啦～今年除了貓咪拉霸，還有機會拿傳說券！？【官方頻道】" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <button class="btn">
+                        <strong>
+                            <a href="https://www.youtube.com/channel/UC6UBir4I6o_0dJQa8eoGoDQ">
+                                官方YouTube頻道
+                            </a>
+                        </strong>
+                    </button>
+                </div>
+                <div class="media-card" style="height:30%;   margin-top:80px ;">
+                    <div class="media" style="justify-content: center">
+                        <strong class="media-tittle">
+                            <span>
+                                Instagram
+                            </span>
+                            <br>
+                            @insta_nyanko_zh
+                        </strong>
+                    </div>
+                    <br>
+                    <button class="btn">
+                        <strong>
+                            <a href="https://www.instagram.com/insta_nyanko_zh/">
+                                Instagram官方帳號
+                            </a>
+                        </strong>
+                    </button>
+                </div>
+            </div>
+
+
+
+        </section>
+
+    </main>
+    <!-- <script src="./javascript/slide.js">
+        
+    </script> -->
+    <script>
+        let index = 0;
+        function refresh() {
+            if (index < 0) {
+                index = 3;
+            }
+            else if (index > 3) {
+                index = 0;
+            }
+            let slider = document.querySelector('.slider')
+            let width = getComputedStyle(slider).width
+            width = Number(width.slice(0, -2))
+            slider.querySelector('.slider-content').style.left = index * width * -1 +
+                "px"
+        }
+        function leftshift() {
+            index--;
+            refresh()
+        }
+        function rightshift() {
+            index++;
+            refresh()
+        }
+        function setIndex(idx) {
+            index = idx;
+            refresh()
+        }
+        refresh()
+    </script>
+</body>
+
+</html>

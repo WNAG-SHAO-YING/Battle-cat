@@ -1,0 +1,25 @@
+ ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        li {
+            
+            margin: 0px 30px;
+            font-size: 24px;
+    
+        }
+
+        header {
+            background-color: orange;
+            height: 50px;
+            width: auto;
+            display: flex;
+            /* padding: 10px; */
+        }
+
+        .battlecat-icon {
+            background-color: transparent;
+            height: 100%;
+            width: auto;
+        }

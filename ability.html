@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>角色能力</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/table.css">
+    <style>
+        main {
+            background-image: url(./img/background/background.png);
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        li {
+            margin: 0px 30px;
+        }
+
+        header {
+            background-color: orange;
+            height: 50px;
+            width: auto;
+            display: flex;
+        }
+
+        .battlecat-icon {
+            background-color: transparent;
+        }
+
+
+
+        table {
+            width: 60%;
+        }
+
+        .icon {
+            display: flex;
+        }
+
+        .icon img {
+            margin: 30px;
+        }
+
+        .intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 30px;
+        }
+
+        .copy {
+            word-break: keep-all;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        span {
+            font-size: 3rem;
+        }
+
+        .ability img {
+            margin: 10px 0 10px 0;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="./homepage.html">
+            <img class="battlecat-icon" src="./img/貓咪大戰爭.png" alt="貓咪大戰爭">
+        </a>
+        <!-- <ul>
+            <li>關卡</li>
+            <li>敵人</li>
+            <li>轉蛋</li>
+        </ul> -->
+
+    </header>
+    <main>
+        <section class="intro">
+            <span>禍根魔女凱斯莉 → 漆黑魔女凱斯莉</span>
+            <div class="icon">
+                <img src="./img/character/ssr01.png">
+                <img src="./img/character/ssr02.png">
+            </div>
+            <div class="copy">
+                一階：
+                <br>
+                無落腳處可投靠的另一位凱斯莉
+                <br>
+                日漸增大的怨恨化為詛咒寄託身體
+                <br>
+                必定能詛咒敵人、發射烈波(遠距範圍攻擊)
+            </div>
+        </section>
+
+        <table>
+            <colgroup>
+                <col style="width: 16%">
+                <col style="width: 14%">
+                <col style="width: 14%">
+                <col style="width: 14%">
+                <col style="width: 14%">
+                <col style="width: 14%">
+                <col style="width: 14%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>等級</th>
+                    <th>LV10</th>
+                    <th>LV20</th>
+                    <th>LV30</th>
+                    <th>LV40</th>
+                    <th>LV50</th>
+                    <th>每提升一級</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HP</td>
+                    <td>20,300</td>
+                    <td>34,800</td>
+                    <td>49,300</td>
+                    <td>63,800</td>
+                    <td>78,300</td>
+                    <td>+1,450</td>
+                </tr>
+                <tr>
+                    <td>硬度</td>
+                    <td>4,060</td>
+                    <td>6,960</td>
+                    <td>9,860</td>
+                    <td>12,760</td>
+                    <td>15,660</td>
+                    <td>+290</td>
+                </tr>
+                <tr>
+                    <td>攻擊力</td>
+                    <td>7,000</td>
+                    <td>12,000</td>
+                    <td>17,000</td>
+                    <td>22,000</td>
+                    <td>27,000</td>
+                    <td>+500</td>
+                </tr>
+                <tr>
+                    <td>DPS</td>
+                    <td>1,228</td>
+                    <td>2,105</td>
+                    <td>2,982</td>
+                    <td>3,859</td>
+                    <td>4,736</td>
+                    <td>+87</td>
+                </tr>
+                <tr>
+                    <td>攻擊頻率</td>
+                    <td>5.7s</td>
+                    <td>出招時間</td>
+                    <td>1.83s</td>
+                    <td rowspan="2">射程</td>
+                    <td rowspan="2">接觸點400</td>
+                    <td rowspan="3">遠方範圍攻擊</td>
+                </tr>
+                <tr>
+                    <td>攻擊間格</td>
+                    <td>0</td>
+                    <td>收招時間</td>
+                    <td>3.87s</td>
+                    <!-- <td colspan="2"></td> -->
+                    <!-- <td></td> -->
+                    <!-- <td></td> -->
+                </tr>
+                <tr>
+                    <td>KB</td>
+                    <td>5</td>
+                    <td>跑速</td>
+                    <td>10</td>
+                    <td>再生產</td>
+                    <td>124.53s</td>
+                    <!-- <td></td> -->
+                </tr>
+                <tr>
+                    <td>召喚金額</td>
+                    <td>一章</td>
+                    <td>3200</td>
+                    <td>二章</td>
+                    <td>4800</td>
+                    <td>三章</td>
+                    <td>6400</td>
+                </tr>
+                <tr>
+                    <td>攻擊對象</td>
+                    <td colspan="6" class="ability">
+                        <img src="/img/character/red.png">
+                        <img src="./img/character/float.png">
+                        <img src="./img/character/black.png">
+                        <img src="./img/character/iron.png">
+                        <img src="./img/character/angle.png">
+                        <img src="./img/character/aqua.png">
+                        <img src="./img/character/zomble.png">
+                        <img src="./img/character/old.png">
+                        <img src="./img/character/white.png">
+                        <img src="./img/character/demon.png">
+                    </td>
+                    <!-- <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> -->
+                </tr>
+                <tr>
+                    <td>抗性</td>
+                    <td colspan="6" class="ability">
+                        <img src="./img/character/1.png">
+                        <img src="./img/character/2.png">
+                        <img src="./img/character/3.png">
+                        <img src="./img/character/4.png">
+                        <img src="./img/character/5.png">
+                    </td>
+                    <!-- <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> -->
+                </tr>
+                <tr>
+                    <td>能力</td>
+                    <td colspan="6" class="ability">
+                        <img src="./img/character/01.png">
+                    </td>
+                    <!-- <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> -->
+                </tr>
+                <tr>
+                    <td>效果</td>
+                    <td colspan="6" class="ability">
+                        <img src="./img/character/02.png">
+                    </td>
+                    <!-- <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> -->
+                </tr>
+
+            </tbody>
+        </table>
+        <section>
+            <br><br>
+            <div class="copy">
+                二階：
+                <br>
+                由靈魂被詛咒的災難化身的災難魔女
+                <br>
+                給予求救者安寧的終焉
+                <br>
+                必定能詛咒敵人、發射烈波(遠距範圍攻擊)
+            </div>
+            <br><br>
+            <table>
+                <colgroup>
+                    <col style="width: 16%">
+                    <col style="width: 14%">
+                    <col style="width: 14%">
+                    <col style="width: 14%">
+                    <col style="width: 14%">
+                    <col style="width: 14%">
+                    <col style="width: 14%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>等級</th>
+                        <th>LV10</th>
+                        <th>LV20</th>
+                        <th>LV30</th>
+                        <th>LV40</th>
+                        <th>LV50</th>
+                        <th>每提升一級</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HP</td>
+                        <td>32,200</td>
+                        <td>55,200</td>
+                        <td>78,200</td>
+                        <td>101,200</td>
+                        <td>124,200</td>
+                        <td>+2,300</td>
+                    </tr>
+                    <tr>
+                        <td>硬度</td>
+                        <td>6,400</td>
+                        <td>11,040</td>
+                        <td>15,640</td>
+                        <td>20,240</td>
+                        <td>24,840</td>
+                        <td>+500</td>
+                    </tr>
+                    <tr>
+                        <td>攻擊力</td>
+                        <td>7,000</td>
+                        <td>12,000</td>
+                        <td>17,000</td>
+                        <td>22,000</td>
+                        <td>27,000</td>
+                        <td>+500</td>
+                    </tr>
+                    <tr>
+                        <td>DPS</td>
+                        <td>1,228</td>
+                        <td>2,105</td>
+                        <td>2,982</td>
+                        <td>3,859</td>
+                        <td>4,736</td>
+                        <td>+87</td>
+                    </tr>
+                    <tr>
+                        <td>攻擊頻率</td>
+                        <td>5.7s</td>
+                        <td>出招時間</td>
+                        <td>1.83s</td>
+                        <td rowspan="2">射程</td>
+                        <td rowspan="2">接觸點400</td>
+                        <td rowspan="3">遠方範圍攻擊</td>
+                    </tr>
+                    <tr>
+                        <td>攻擊間格</td>
+                        <td>0</td>
+                        <td>收招時間</td>
+                        <td>3.87s</td>
+                        <!-- <td colspan="2"></td> -->
+                        <!-- <td></td> -->
+                        <!-- <td></td> -->
+                    </tr>
+                    <tr>
+                        <td>KB</td>
+                        <td>5</td>
+                        <td>跑速</td>
+                        <td>10</td>
+                        <td>再生產</td>
+                        <td>124.53s</td>
+                        <!-- <td></td> -->
+                    </tr>
+                    <tr>
+                        <td>召喚金額</td>
+                        <td>一章</td>
+                        <td>3200</td>
+                        <td>二章</td>
+                        <td>4800</td>
+                        <td>三章</td>
+                        <td>6400</td>
+                    </tr>
+                    <tr>
+                        <td>攻擊對象</td>
+                        <td colspan="6" class="ability">
+                            <img src="/img/character/red.png">
+                            <img src="./img/character/float.png">
+                            <img src="./img/character/black.png">
+                            <img src="./img/character/iron.png">
+                            <img src="./img/character/angle.png">
+                            <img src="./img/character/aqua.png">
+                            <img src="./img/character/zomble.png">
+                            <img src="./img/character/old.png">
+                            <img src="./img/character/white.png">
+                            <img src="./img/character/demon.png">
+                        </td>
+                        <!-- <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> -->
+                    </tr>
+                    <tr>
+                        <td>抗性</td>
+                        <td colspan="6" class="ability">
+                            <img src="./img/character/1.png">
+                            <img src="./img/character/2.png">
+                            <img src="./img/character/3.png">
+                            <img src="./img/character/4.png">
+                            <img src="./img/character/5.png">
+                        </td>
+                        <!-- <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> -->
+                    </tr>
+                    <tr>
+                        <td>能力</td>
+                        <td colspan="6" class="ability">
+                            <img src="./img/character/01.png">
+                        </td>
+                        <!-- <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> -->
+                    </tr>
+                    <tr>
+                        <td>效果</td>
+                        <td colspan="6" class="ability">
+                            <img src="./img/character/02.png">
+                        </td>
+                        <!-- <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td> -->
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+
+</body>
+
+</html>
